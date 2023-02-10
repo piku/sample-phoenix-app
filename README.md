@@ -1,18 +1,23 @@
-# PhxDeployTest
+# Sample Phoenix Application for `piku`
 
-To start your Phoenix server:
+Simple Phoenix app to demonstrate deployment on [piku](https://github.com/piku/piku).
 
-  * Install dependencies with `mix deps.get`
-  * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
+It was tested and worked a while ago (Oct. 2022), not sure about now. 
+It should be a good starting point nevertheless.
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+## Set up
+Make sure you have erlang, elixr and postgres configured on your server.
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+Before the first automatic deploy, you have to ssh to your server, go to the repo and run `ecto create` to create the database.
 
-## Learn more
+Then on your local development machine, set the remote git branch for piku push-to-deploy.
 
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+```shell
+git remote add piku piku@you_serveer:sample_phoenix_app
+```
+
+You are ready to deploy with:
+
+```shell
+git push piku master
+```
