@@ -1,5 +1,7 @@
 # Sample Phoenix Application for `piku`
 
+| Contributed by `axelbdt`
+
 Simple Phoenix app to demonstrate deployment on [piku](https://github.com/piku/piku).
 
 It was tested and worked a while ago (Oct. 2022), not sure about now. 
